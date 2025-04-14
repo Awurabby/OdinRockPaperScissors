@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    function getComputerChoice(){
+      let computerChoice;
+      let randomNumber = Math.random();
+
+      if (randomNumber < 0.4) {
+        computerChoice = "Rock"
+      }
+      else if (randomNumber > 0.3 && randomNumber < 0.7) {
+        computerChoice = "Paper"
+      }
+      else {computerChoice = "Scissors"}
+      console.log(randomNumber);
+      console.log(computerChoice);
+    }
+    getComputerChoice();
+
+    function getHumanChoice(){
+      let userChoice = prompt("Enter an option");
+      console.log("You entered" +" " + userChoice);
+    }
+    getHumanChoice();
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
