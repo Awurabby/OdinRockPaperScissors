@@ -53,13 +53,21 @@ function getComputerChoice(){
     resultDiv.textContent = "You lose! scissors beats paper";
       computerScore += 1;
     }
+    if ((computerScore === 5) || (humanScore === 5)){
+      resultDiv.textContent = "Game Over!";
+      if (computerScore > humanScore){
+        resultDiv.textContent = `You lost! You scored ${humanScore} but the computer scored ${computerScore} `
+      } else{
+        resultDiv.textContent = `You won! The computer scored ${computerScore} but you scored ${humanScore}`
+      }
+      
+      btn.forEach((button) => {
+        button.disabled = true;
+      })
+    }
   }
   
 
-  if (computerScore > humanScore){
-    console.log(`Game over, you lost!. The computer scored ${computerScore} and you scored ${humanScore} :(`)
-  }
-  else {console.log(`Game over, you won!. The computer scored ${computerScore} and you scored ${humanScore} :)`)}
 
 
 const btn = document.querySelectorAll("button");
